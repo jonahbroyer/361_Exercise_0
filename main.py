@@ -1,6 +1,9 @@
 """
+Jonah Broyer
+
 Show a list of Formula 1 drivers sorted by last name
-and sorted by their number
+and then sorted by their number (don't forget to display 'YEET! next to
+Lewis Hamilton).
 """
 
 drivers = ["Max Verstappen 33 Red Bull", "Lewis Hamilton 44 Mercedes YEET!", "Valtteri Bottas 77 Mercedes",
