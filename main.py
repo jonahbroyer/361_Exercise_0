@@ -30,12 +30,12 @@ def numeric_header():
           "===========================")
 
 
-def print_lastname():
-    drivers.sort()
+def sort_lastname():
+    drivers.sort(key=lambda x: x.split()[1])
     print('\n'.join(drivers) + '\n')
 
 
-def print_drivernum():
+def sort_drivernum():
     # sorted function discovered on
     # https://stackoverflow.com/questions/49232823/python-sort-a-list-of-strings-composed-of-letters-and-numbers
     num_sort = sorted(drivers, key=lambda x: int(''.join([i for i in x if i.isdigit()])))
@@ -45,6 +45,6 @@ def print_drivernum():
 if __name__ == '__main__':
     header()
     alphabet_header()
-    print_lastname()
+    sort_lastname()
     numeric_header()
-    print_drivernum()
+    sort_drivernum()
