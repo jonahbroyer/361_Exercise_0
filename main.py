@@ -20,19 +20,31 @@ def header():
           "===============\n")
 
 
+def alphabet_header():
+    print("2021 F1 Drivers - Alphabetical\n"
+          "==============================")
+
+
+def numeric_header():
+    print("2021 F1 Drivers - Numerical\n"
+          "===========================")
+
+
 def print_lastname():
     drivers.sort()
-    print('\n'.join(drivers))
+    print('\n'.join(drivers) + '\n')
 
 
 def print_drivernum():
     # sorted function discovered on
     # https://stackoverflow.com/questions/49232823/python-sort-a-list-of-strings-composed-of-letters-and-numbers
     num_sort = sorted(drivers, key=lambda x: int(''.join([i for i in x if i.isdigit()])))
-    print('\n' + '\n'.join(num_sort))
+    print('\n'.join(num_sort))
 
 
 if __name__ == '__main__':
     header()
+    alphabet_header()
     print_lastname()
+    numeric_header()
     print_drivernum()
